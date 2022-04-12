@@ -1,0 +1,336 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, #FBDB89, #F48982);
+    padding: 0;
+    margin: 0;
+}
+
+/*global*/
+a {
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+svg{
+    width: 25px;
+    height: 25px;
+    
+}
+.btn-tiny {
+   margin-left: 5px;
+   width: 20px;
+   height: 20px;
+   border-radius: 20px;
+}
+.recipe__info-icon{
+    margin: 0 5px;
+}
+button{
+    border: none;
+    outline: none;
+    margin-left: 5px;
+}
+.recipe__btn{
+    border-radius: 15px;
+    padding: 10px 20px;
+    background-image: linear-gradient(to right bottom, #FBDB89, #F48982);
+}
+/* spinner
+@keyframes spin{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.loader{
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 0.5s linear infinite;
+    margin: 20px 80px;
+} */
+
+
+/*Header*/
+header, .navigation{
+    position: fixed;
+    top: 0;
+    background-color: white;
+    height: 50px; width: 100%;
+}
+
+/*Wishlist*/
+.Wishlist, .myShoppingList, .searchbtn{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top:0;
+}
+.searchbtn{ right: 100px; }
+.myShoppingList{ right: 50px; }
+.Wishlist{ right: 0; }
+.navigation button{
+    height: 50px; width: 50px;
+    background-image: linear-gradient(to right, #FBDB89, #F48982);
+}
+.search{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+.search form{
+    margin: 0; padding: 0;
+    outline: none;
+}
+.search form input{
+    height: 25px;
+    border-radius: 20px;
+    text-align: center;
+}
+.search form button{
+    height: 30px;
+    border-radius: 20px;
+    transform: translateX(-55px);
+}
+
+.likes__panel{
+    background-color: white;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    min-width: 400px;
+}
+.likes__link{
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    font-weight: 10px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.likes__fig{
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+.likes__fig img{
+    float: left;
+    width: 70px;
+    height: 70px;
+    border-radius: 30px;
+    margin-left: 20px;
+}
+.likes__data{
+    flex: 3;
+    margin-left: -20px;
+}
+
+
+/*Content*/
+#section{
+    margin-top: 60px;
+}
+/* .content{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+} */
+.content *{
+    margin: 0;
+    padding: 0;
+}
+
+/* Recipes list */
+.result__list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 20px;
+    justify-items: center;
+    align-content: center;
+} 
+.result__list figure{
+    background-color: white;
+    height: 28vh;
+    width:20vw;
+    padding: 3px;
+}
+.result__list img{
+    height: 20vh;
+    width:20vw;
+}
+.results__data{
+    text-align: center;
+}
+
+/* Recipe*/
+#col-2{
+    margin: 2rem; background-color: #F9F5F3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+}
+/*recipe column*/
+.recipe__fig{
+    border: 2px soild lemonchiffon;
+}
+.recipe__fig{
+    margin: 0; padding: 5px;
+    justify-content: center; align-items: center; text-align: center;
+}
+.recipe__fig img{
+    width: 90%;
+    height: 30vh;
+}
+.recipe__fig img::after{
+    background-image: linear-gradient(to right bottom, #FBDB89, #F48982);
+}
+.recipe__title{
+    position: relative;
+    left: 5%;
+    transform: translateY(-10px);
+    font-size: 2rem;
+    width: 90%;
+    background-image: linear-gradient(to right bottom, #FBDB89, #F48982);
+}
+.recipe__details{
+    display: flex;
+}
+.recipe__info{
+    display: float;
+    margin-left: 5px;
+}
+.recipe__info-buttons{
+    float: right;
+    margin-left: 5px;
+}
+.recipe__directions{
+    grid-column: 1 / 3;
+}
+.recipe__love{
+    margin-left: 10px;
+}
+.deletecol-2{
+    display: none;
+    position: relative;
+    left: 56%;
+}
+#col-2:hover .deletecol-2{
+    display: block !important;
+}
+
+/*recipe ingredient*/
+.recipe__ingredients{
+    background-color: lemonchiffon;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.recipe__ingredients ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    padding-bottom: 10px;
+}
+.recipe__item{
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8rem;
+    margin: 5px;
+}
+.recipe__count{
+    margin-left: 5px;
+}
+.recipe__ingredient{
+    margin-left: 5px;
+}
+.recipe__ingredients .recipe__btn{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);   
+}
+
+.col-3{
+    background-color: white;
+    margin: 2rem;
+}
+.col-3 h2{
+    padding-top: 1rem; padding-bottom: 1rem;
+    text-align: center;
+    font-style: oblique;
+    font-weight: 150;
+    font-size: 2vw;
+    transform: skewY(-3deg);
+}
+.show{
+    display: none !important;
+}
+
+/*shopping List*/
+.shopping__item{
+    margin: 0 20vw;
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.shopping__count{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+.shopping__count input{
+    width: 40px;
+    height: .8rem;
+    margin-right: 5px;
+}
+.shopping__count p{
+    margin: 0;
+    padding: 0;
+}
+.shopping__description{
+    flex: 1;
+    margin-left: 5px;
+}
+.shopping__item{
+    padding: 5px;
+}
+.shopping__delete{
+    display: none;
+}
+.shopping__item:hover .shopping__delete{
+    display: block !important;
+}
+
+
+/*How to cook*/
+.recipe__directions{
+    margin-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.recipe__directions h2{
+    margin: 0;
+    padding: 0;
+    color: #F48982;
+    font-weight: 400;
+    font-size: 5vw;
+    transform: skew(-10deg) rotate(-5deg);
+}
+.recipe__directions *{
+    margin-top: 30px;
+}
+
+/*Footer*/
+.footer{
+    margin-top: 20px; padding: 0;
+}
